@@ -23,10 +23,11 @@ jobs:
           gradle-version: '8.10.2'
 
       - name: Compilar Mod (.jar)
+        working-directory: "./inventario infinito"
         run: gradle build
 
       - name: Subir archivo JAR listo
         uses: actions/upload-artifact@v4
         with:
           name: Mod-Inventario-Infinito
-          path: build/libs/*.jar
+          path: "inventario infinito/build/libs/*.jar"
